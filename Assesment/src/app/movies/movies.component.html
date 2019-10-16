@@ -1,0 +1,18 @@
+<div class="col-md-4 offset-4 mt-4 mb-4">
+<input type="search" name="search" id="search" class="col-md-4 offset-4 mt-4 mb-4 card card-body" placeholder="search by Movie name" class="form-control" #search="ngModel" ngModel required>
+</div>
+
+<span *ngFor="let movie of Movies">
+    <img src="{{movie.imgUrl}}" alt="">
+    <h1>{{movie.name}}</h1>
+    </span>
+    <span *ngFor="let movie of Movies">
+    <img src="{{movie.imgUrl1}}" alt="">
+    <h1>{{movie.name1}}</h1>
+    </span>
+    <span *ngFor="let movie of Movies">
+            <img src="{{movie.imgUrl2}}" alt="">
+            <h1>{{movie.name2}}</h1>
+            </span>
+            
+    

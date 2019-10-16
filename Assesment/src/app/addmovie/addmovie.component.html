@@ -1,0 +1,35 @@
+<form action="" class="col-md-4 offset-4 mt-5 card card-body" #form="ngForm" (ngSubmit)="inputData(form)">
+        <h1 class="text-center bg-success text-white">Add Movie</h1>
+        <div class="form group">
+          <input type="text" name="moviename" id="moviename" class="form-control" placeholder="Add Movie" #text="ngModel" ngModel required>
+           <div *ngIf="text.touched && text.invalid">
+            <p  class="alert alert-danger" *ngIf="text.errors.required">*This field is Required</p>
+           </div>
+          </div>
+          
+          <div class="form group">
+          <input type="text" name="movietitle" id="movietitle" class="form-control" placeholder="Movie Title" #text="ngModel" ngModel required>
+           <div *ngIf="text.touched && text.invalid">
+           <p class="alert alert-danger" *ngIf="text.errors.required">*This field is Required</p>
+           </div>
+          </div>
+          
+          <div class="form group">
+            <input type="url" name="movieimgurl" id="movieimgurl" class="form-control" placeholder="Movieimgurl" #url="ngModel" ngModel required>
+             <div *ngIf="url.touched && url.invalid">
+              <p  class="alert alert-danger" *ngIf="url.errors.required">*This field is Required</p>
+             </div>
+            </div>
+          
+           <div class="form group">
+            <input type="text" name="movie description" id="movie descriptuion" class="form-control" placeholder="Movie description" #text="ngModel" ngModel required>
+             <div *ngIf="text.touched && text.invalid">
+             <p class="alert alert-danger" *ngIf="text.errors.required">*This field is Required</p>
+             </div>
+          </div>
+          
+          
+          <div class="form-group">
+          <button type="submit" class="btn btn-outline-success float-right"[disabled]="form.invalid">Add</button>
+          </div>
+      </form>

@@ -1,0 +1,5 @@
+30,Babu,300000,M
+31,Rani,340000,F
+32,Venkataramana,55000,M
+33,Ramalakshumamma,87000,F
+34,Venkateswari,120000,F

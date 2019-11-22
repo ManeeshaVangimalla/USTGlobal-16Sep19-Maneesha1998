@@ -1,0 +1,5 @@
+10,Maneesha,100000,F
+11,Karthik,200000,M
+12,Rupa,45000,F
+13,Prasad,67000,M
+14,Ramesh,350000,M

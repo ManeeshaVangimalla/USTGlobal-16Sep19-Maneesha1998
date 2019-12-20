@@ -1,0 +1,19 @@
+<<div class="alert alert-danger" *ngIf='error'>{{error}}</div>
+    <div class="col-md-4 offset-md-4 mt-5 card">
+        <div class="card-header">
+            <h4  class="col-md-4 offset-md-4 mt-5 card" class="navbar navbar-expand-sm navbar-dark bg-success">SearchProductByCategory</h4>
+        </div>
+        <div class="card-body">
+            <form #searchProductByCategoryForm='ngForm' (ngSubmit)='searchProductByCategory(searchProductByCategoryForm)' method="POST" role="form">
+                <input type="text" name="category" required minlength="3" id="category" #category='ngModel' ngModel
+                    class="form-control mb-3" placeholder="Enter Product category..">
+                <div *ngIf="category.invalid && category.touched">
+                    <p *ngIf="category.errors.required" class="text-danger">*This field is mandatory
+                        <p *ngIf="category.errors.minlength" class="text-danger">*This field accepts minimum
+                            3 characters
+                </div>
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit"
+                [disabled]="searchProductByCategoryForm.invalid">Search Product</button>
+            </form>
+        </div>
+    </div>
